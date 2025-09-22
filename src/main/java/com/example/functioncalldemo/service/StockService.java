@@ -11,6 +11,8 @@ import lombok.extern.slf4j.Slf4j;
 public class StockService {
     private String stockSiteApiKey;
     private RestClient restClient;
+    private int counter;
+
 
     public StockService(RestClient restClient, @Value("${stock.details.api.site.key}") String stockSiteApiKey) {
         this.stockSiteApiKey = stockSiteApiKey;
